@@ -1,0 +1,206 @@
+{
+    "auth": "private_key_header",
+    "calls": {
+        "AAD": {
+            "body": "{\n\t\"prompt\": \"<prompt>\",\n\t\"model\": \"<model>\",\n    \"n\": <n>,\n    \"quality\": \"<quality>\",\n    \"response_format\": \"<response_format>\",\n    \"size\": \"<size>\",\n    \"style\": \"<style>\",\n    \"user\": \"<user>\"\n        \n}",
+            "body_params": {
+                "AAE": {
+                    "allow_blank": true,
+                    "doc": "The model to use for image generation.",
+                    "key": "model",
+                    "private": true,
+                    "value": "dall-e-2"
+                },
+                "AAF": {
+                    "doc": "A text description of the desired image(s). The maximum length is 1000 characters for dall-e-2 and 4000 characters for dall-e-3.",
+                    "key": "prompt",
+                    "private": true,
+                    "value": "A cute baby sea otter"
+                },
+                "AAG": {
+                    "allow_blank": true,
+                    "doc": "The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported.",
+                    "key": "n",
+                    "private": true,
+                    "value": "1"
+                },
+                "AAH": {
+                    "allow_blank": true,
+                    "doc": "The quality of the image that will be generated. hd creates images with finer details and greater consistency across the image. This param is only supported for dall-e-3.",
+                    "key": "quality",
+                    "private": true,
+                    "value": "standard"
+                },
+                "AAI": {
+                    "allow_blank": true,
+                    "doc": "The format in which the generated images are returned. Must be one of url or b64_json. URLs are only valid for 60 minutes after the image has been generated.",
+                    "key": "response_format",
+                    "private": true,
+                    "value": "url"
+                },
+                "AAJ": {
+                    "allow_blank": true,
+                    "doc": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024 for dall-e-2. Must be one of 1024x1024, 1792x1024, or 1024x1792 for dall-e-3 models.",
+                    "key": "size",
+                    "private": true,
+                    "value": "1024x1024"
+                },
+                "AAK": {
+                    "allow_blank": true,
+                    "doc": "The style of the generated images. Must be one of vivid or natural. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for dall-e-3.",
+                    "key": "style",
+                    "private": true,
+                    "value": "vivid"
+                },
+                "AAL": {
+                    "allow_blank": true,
+                    "doc": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse",
+                    "key": "user",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": false,
+            "method": "post",
+            "name": "Create image",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1731678720778x814678813411115000.plugin_api.AAD",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAD\":{\"caption\":\"Create image\",\"fields\":{\"_p_created\":{\"ret_btype\":\"number\",\"caption\":\"created\",\"sample_value\":1731680041,\"path\":[\"created\"]},\"_p_data\":{\"ret_btype\":\"list.api.1731678720778x814678813411115000.plugin_api.AAD.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAD.data\":{\"caption\":\"Create image data\",\"fields\":{\"_p_url\":{\"ret_btype\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-7tyh039un6unHTZBRqCnNceX/user-QNTWbgDUxD3GQ1f6u3LXPRFr/img-UkQD7HNTHb3WrKosvteJlcfx.png?st=2024-11-15T13%3A14%3A01Z&se=2024-11-15T15%3A14%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-14T20%3A08%3A22Z&ske=2024-11-15T20%3A08%3A22Z&sks=b&skv=2024-08-04&sig=WESkY%2BXYnGAjnfOMMUfohRZFcYLAJ1EFCbXwzt0JaP4%3D\",\"path\":[\"url\"]}}}}",
+            "url": "https://api.openai.com/v1/images/generations"
+        },
+        "AAN": {
+            "0": "A",
+            "1": "A",
+            "2": "M",
+            "body": "{\n\t\"image\": \"<image>\",\n\t\"prompt\": \"<prompt>\",\n\t\"model\": \"<model>\",\n    \"mask\": \"<mask>\",\n    \"n\": <n>,\n    \"response_format\": \"<response_format>\",\n    \"size\": \"<size>\",\n    \"user\": \"<user>\"\n        \n}",
+            "body_params": {
+                "AAE": {
+                    "allow_blank": true,
+                    "doc": "The model to use for image generation.",
+                    "key": "model",
+                    "private": true,
+                    "value": "dall-e-2"
+                },
+                "AAF": {
+                    "doc": "A text description of the desired image(s). The maximum length is 1000 characters for dall-e-2 and 4000 characters for dall-e-3.",
+                    "key": "prompt",
+                    "private": true,
+                    "value": "A cute baby sea otter"
+                },
+                "AAG": {
+                    "allow_blank": true,
+                    "doc": "The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported.",
+                    "key": "n",
+                    "private": true,
+                    "value": "1"
+                },
+                "AAI": {
+                    "allow_blank": true,
+                    "doc": "The format in which the generated images are returned. Must be one of url or b64_json. URLs are only valid for 60 minutes after the image has been generated.",
+                    "key": "response_format",
+                    "private": true,
+                    "value": "url"
+                },
+                "AAJ": {
+                    "allow_blank": true,
+                    "doc": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+                    "key": "size",
+                    "private": true,
+                    "value": "1024x1024"
+                },
+                "AAL": {
+                    "allow_blank": true,
+                    "doc": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse",
+                    "key": "user",
+                    "private": true,
+                    "value": ""
+                },
+                "AAO": {
+                    "doc": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.",
+                    "key": "image",
+                    "private": true,
+                    "value": ""
+                },
+                "AAP": {
+                    "allow_blank": true,
+                    "doc": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.",
+                    "key": "mask",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": false,
+            "method": "post",
+            "name": "Create image edit",
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1731678720778x814678813411115000.plugin_api.AAD",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAM\":{\"caption\":\"Create image\",\"fields\":{\"_p_created\":{\"ret_btype\":\"number\",\"caption\":\"created\",\"sample_value\":1731680041,\"path\":[\"created\"]},\"_p_data\":{\"ret_btype\":\"list.api.1731678720778x814678813411115000.plugin_api.AAM.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAM.data\":{\"caption\":\"Create image data\",\"fields\":{\"_p_url\":{\"ret_btype\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-7tyh039un6unHTZBRqCnNceX/user-QNTWbgDUxD3GQ1f6u3LXPRFr/img-UkQD7HNTHb3WrKosvteJlcfx.png?st=2024-11-15T13%3A14%3A01Z&se=2024-11-15T15%3A14%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-14T20%3A08%3A22Z&ske=2024-11-15T20%3A08%3A22Z&sks=b&skv=2024-08-04&sig=WESkY%2BXYnGAjnfOMMUfohRZFcYLAJ1EFCbXwzt0JaP4%3D\",\"path\":[\"url\"]}}}}",
+            "url": "https://api.openai.com/v1/images/edits"
+        },
+        "AAS": {
+            "0": "A",
+            "1": "A",
+            "2": "R",
+            "body": "{\n\t\"image\": \"<image>\",\n\t\"model\": \"<model>\",\n    \"n\": <n>,\n    \"response_format\": \"<response_format>\",\n    \"size\": \"<size>\",\n    \"user\": \"<user>\"\n        \n}",
+            "body_params": {
+                "AAE": {
+                    "allow_blank": true,
+                    "doc": "The model to use for image generation.",
+                    "key": "model",
+                    "private": true,
+                    "value": "dall-e-2"
+                },
+                "AAG": {
+                    "allow_blank": true,
+                    "doc": "The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported.",
+                    "key": "n",
+                    "private": true,
+                    "value": "1"
+                },
+                "AAI": {
+                    "allow_blank": true,
+                    "doc": "The format in which the generated images are returned. Must be one of url or b64_json. URLs are only valid for 60 minutes after the image has been generated.",
+                    "key": "response_format",
+                    "private": true,
+                    "value": "url"
+                },
+                "AAJ": {
+                    "allow_blank": true,
+                    "doc": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+                    "key": "size",
+                    "private": true,
+                    "value": "1024x1024"
+                },
+                "AAL": {
+                    "allow_blank": true,
+                    "doc": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse",
+                    "key": "user",
+                    "private": true,
+                    "value": ""
+                },
+                "AAT": {
+                    "doc": "The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square.",
+                    "key": "image",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": false,
+            "method": "post",
+            "name": "Create image variation",
+            "publish_as": "action",
+            "rank": 2,
+            "ret_value": "api.1731678720778x814678813411115000.plugin_api.AAD",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAR\":{\"caption\":\"Create image\",\"fields\":{\"_p_created\":{\"ret_btype\":\"number\",\"caption\":\"created\",\"sample_value\":1731680041,\"path\":[\"created\"]},\"_p_data\":{\"ret_btype\":\"list.api.1731678720778x814678813411115000.plugin_api.AAR.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAR.data\":{\"caption\":\"Create image data\",\"fields\":{\"_p_url\":{\"ret_btype\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://oaidalleapiprodscus.blob.core.windows.net/private/org-7tyh039un6unHTZBRqCnNceX/user-QNTWbgDUxD3GQ1f6u3LXPRFr/img-UkQD7HNTHb3WrKosvteJlcfx.png?st=2024-11-15T13%3A14%3A01Z&se=2024-11-15T15%3A14%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-14T20%3A08%3A22Z&ske=2024-11-15T20%3A08%3A22Z&sks=b&skv=2024-08-04&sig=WESkY%2BXYnGAjnfOMMUfohRZFcYLAJ1EFCbXwzt0JaP4%3D\",\"path\":[\"url\"]}}}}",
+            "url": "https://api.openai.com/v1/images/variations"
+        }
+    },
+    "human": "OpenAI",
+    "shared_params": {
+    }
+}

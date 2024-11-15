@@ -1,0 +1,14 @@
+{
+    "categories": {
+        "0": "artificial intelligence (AI)",
+        "1": "media",
+        "2": "image",
+        "3": "technical",
+        "4": "compliance"
+    },
+    "description": "The image generations endpoint allows you to create an original image given a text prompt. When using DALL·E 3, images can have a size of 1024x1024, 1024x1792 or 1792x1024 pixels.\n\nBy default, images are generated at standard quality, but when using DALL·E 3 you can set quality: \"hd\" for enhanced detail. Square, standard quality images are the fastest to generate.\n\nYou can request 1 image at a time with DALL·E 3 (request more by making parallel requests) or up to 10 images at a time using DALL·E 2 with the n parameter.",
+    "image": "//meta-q.cdn.bubble.io/f1731679268181x141079750724169460/2a62c34e0d217a7aa14645ce114d84b3.jpg",
+    "license": "open_source",
+    "link": "https://platform.openai.com/docs/api-reference/images",
+    "name": "OpenAI DALL·E Image generation"
+}
